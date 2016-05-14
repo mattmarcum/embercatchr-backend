@@ -1,0 +1,21 @@
+version: '2'
+services:
+  redis:
+    image: redis
+  couchdb:
+    image: couchdb
+    ports:
+      - "5001:5984"
+  nginx:
+    image: nginx
+    links:
+      - node
+    ports:
+      - "5000:80"
+  node:
+    image: node:4.4.4
+    links:
+      - couchdb
+      - redis
+    ports:
+      - "5002:8080"
