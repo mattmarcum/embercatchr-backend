@@ -10,12 +10,15 @@ services:
     image: nginx
     links:
       - node
+      - couchdb
     ports:
       - "5000:80"
   node:
-    image: node:4.4.4
+    build: .
+    volumes:
+      - "./app:/src/app"
     links:
       - couchdb
       - redis
     ports:
-      - "5002:8080"
+      - "5002:3000"

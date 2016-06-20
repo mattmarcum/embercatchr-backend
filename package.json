@@ -1,9 +1,10 @@
 {
   "name": "embercatchr-server",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Embercatchr's backend server: superlogin on docker",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
