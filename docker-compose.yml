@@ -14,9 +14,9 @@ services:
     ports:
       - "5000:80"
   node:
-    build: .
+    build: ./node_server
     volumes:
-      - "./app:/src/app"
+      - "./node_server:/usr/src/app"
     links:
       - couchdb
       - redis
