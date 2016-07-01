@@ -6,6 +6,8 @@ services:
     image: couchdb
     ports:
       - "5001:5984"
+    volumes:
+      - "./couchdb:/usr/local/var/lib/couchdb"
   nginx:
     image: nginx
     links:

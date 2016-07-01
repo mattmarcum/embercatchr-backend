@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 const config = {
   dbServer: {
     protocol: 'http://',
-    host: 'couchdb:5001',
+    host: 'couchdb:5984',
     user: '',
     password: '',
     userDB: 'sl-users',
