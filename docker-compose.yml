@@ -3,11 +3,13 @@ services:
   redis:
     image: redis
   couchdb:
+    env_file: ./couchdb/.env
     image: couchdb
     ports:
       - "5001:5984"
     volumes:
-      - "./couchdb:/usr/local/var/lib/couchdb"
+      - "./couchdb/files:/usr/local/var/lib/couchdb"
+      - "./couchdb/config:/usr/local/etc/couchdb/local.d"
   nginx:
     image: nginx
     links:
