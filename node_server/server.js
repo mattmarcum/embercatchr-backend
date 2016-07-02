@@ -11,8 +11,8 @@ const config = {
   dbServer: {
     protocol: 'http://',
     host: 'couchdb:5984',
-    user: '',
-    password: '',
+    user: process.env.COUCHDB_USER,
+    password: process.env.COUCHDB_PASSWORD,
     userDB: 'sl-users',
     couchAuthDB: '_users'
   },
